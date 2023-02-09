@@ -9,6 +9,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Route } from '@angular/router';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodoFormComponent, TodoFormPopup } from './todo-form/todo-form.component';
 
 const routes: Route[] = [
   {path: '', redirectTo: '/list',pathMatch: 'full'},
@@ -19,7 +21,10 @@ const routes: Route[] = [
   declarations: [
     AppComponent,
     TodoComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    TodoListComponent,
+    TodoFormComponent,
+    TodoFormPopup
   ],
   imports: [
     BrowserModule,
