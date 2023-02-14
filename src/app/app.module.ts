@@ -18,7 +18,8 @@ import { MatIcon, MatIconModule } from '@angular/material/icon'
 
 const routes: Route[] = [
   {path: '', redirectTo: '/list',pathMatch: 'full'},
-  {path: '**', component: PageNotFoundComponent}
+  {path: 'list', component: TodoListComponent},
+  {path: '**', component: PageNotFoundComponent},
 ]
 
 @NgModule({

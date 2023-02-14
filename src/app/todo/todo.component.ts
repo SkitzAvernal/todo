@@ -22,7 +22,7 @@ export class TodoComponent implements OnInit {
   onChange() {
     console.log("Changed")
     this.completed = !this.completed
-    this.completed ? this.toasterService.success(`Task succesfully completed!`, 'completed') : '';
+    this.completed ? this.toasterService.success(`Task succesfully completed!`, 'Completed') : '';
   }
   
   onClick() {

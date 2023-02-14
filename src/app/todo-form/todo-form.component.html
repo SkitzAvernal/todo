@@ -3,9 +3,10 @@
       <form (ngSubmit)="onSubmit()" #addTodo="ngForm">
         <div mat-dialog-content>
           <input type="text" name="todo" class="form-control" placeholder="Add Todo..." [(ngModel)]="todo" required>
+        </div>
+        <div mat-dialog-actions>
+          <button mat-button [disabled]="addTodo.invalid" type="submit">Add</button>
         </div>        
       </form>
     </div>
-    <div mat-dialog-actions>
-      <button mat-button [disabled]="addTodo.invalid">Add</button>
-    </div>
+    
