@@ -1,1 +1,11 @@
-<p>todo-form works!</p>
+<h1 mat-dialog-title>Adding A New Thing to Do</h1>
+    <div mat-dialog-content>
+      <form (ngSubmit)="onSubmit()" #addTodo="ngForm">
+        <div mat-dialog-content>
+          <input type="text" name="todo" class="form-control" placeholder="Add Todo..." [(ngModel)]="todo" required>
+        </div>        
+      </form>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button [disabled]="addTodo.invalid">Add</button>
+    </div>
