@@ -10,7 +10,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Route } from '@angular/router';
 import { TodoListComponent } from './todo-list/todo-list.component';
-import { TodoFormComponent, TodoFormPopup } from './todo-form/todo-form.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { TodoFormComponent } from './todo-form/todo-form.component';
+import { TodoAddButtonComponent } from './todo-add-button/todo-add-button.component';
+import { MatIcon, MatIconModule } from '@angular/material/icon'
 
 const routes: Route[] = [
   {path: '', redirectTo: '/list',pathMatch: 'full'},
@@ -24,7 +28,7 @@ const routes: Route[] = [
     PageNotFoundComponent,
     TodoListComponent,
     TodoFormComponent,
-    TodoFormPopup
+    TodoAddButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,10 @@ const routes: Route[] = [
     AppRoutingModule,
     ToastrModule.forRoot(),
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    MatDialogModule,
+    MatButtonModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
