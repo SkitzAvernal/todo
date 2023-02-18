@@ -7,14 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Route } from '@angular/router';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { TodoFormComponent } from './todo-form/todo-form.component';
 import { TodoAddButtonComponent } from './todo-add-button/todo-add-button.component';
-import { MatIcon, MatIconModule } from '@angular/material/icon'
+import { MatIconModule } from '@angular/material/icon';
+import { LoginComponent } from './login/login.component'
 
 const routes: Route[] = [
   {path: '', redirectTo: '/list',pathMatch: 'full'},
@@ -30,6 +31,7 @@ const routes: Route[] = [
     TodoListComponent,
     TodoFormComponent,
     TodoAddButtonComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,7 @@ const routes: Route[] = [
     AppRoutingModule,
     ToastrModule.forRoot(),
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),
     MatDialogModule,
     MatButtonModule,
